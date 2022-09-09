@@ -29,8 +29,8 @@ def square():
         return error_message
 
     else:
-        value = int(request.args["value"])
-        value = request.args.get("value", type=int)
+        value = float(request.args["value"])
+        value = request.args.get("value", type=float)
         return json.dumps({"Value Squared": value**2})
 
 
