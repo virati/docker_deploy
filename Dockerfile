@@ -12,4 +12,4 @@ RUN poetry update
 
 RUN export FLASK_APP=/root/prod_docker/app/apply.py
 
-ENTRYPOINT ["flask","run"]
+ENTRYPOINT ["poetry","run", "flask","run"]
