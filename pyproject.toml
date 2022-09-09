@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "prod-docker"
+version = "0.1.0"
+description = "Basic Prod Docker"
+authors = ["Vineet Tiruvadi <virati@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "prod_docker"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.2.2"
+requests = "^2.28.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
