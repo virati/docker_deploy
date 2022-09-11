@@ -11,6 +11,7 @@ packages = [{include = "prod_docker"}]
 python = "^3.10"
 Flask = "^2.2.2"
 requests = "^2.28.1"
+waitress = "^2.1.2"
 
 
 [build-system]
