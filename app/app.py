@@ -11,7 +11,7 @@ description = """
                 </head>
                 <body>  
                     <h3>A simple API using Flask</h3>
-                    <a href="http://localhost:5000/api?value=2">sample request</a>
+                    <a href="http://172.17.0.3:5000/api?value=2">sample request</a>
                 </body>
                 """
 
@@ -37,5 +37,5 @@ def square():
 if __name__ == "__main__":
     from waitress import serve
 
-    serve(app, host="0.0.0.0", port=5000)
-    # app.run(host="0.0.0.0", port=5000)
+    # serve(app, host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000)
