@@ -2,11 +2,10 @@ FROM python
 
 WORKDIR /root/prod_docker
 
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+RUN curl -sSL  | python -
 ENV PATH = "${PATH}:/root/.local/bin"
 COPY poetry.lock pyproject.toml /root/prod_docker/
 RUN poetry update
-#RUN poetry self add poetry-dotenv-plugin
 
 COPY . .
 EXPOSE 8000
