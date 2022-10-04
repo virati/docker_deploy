@@ -1,8 +1,10 @@
-FROM python
+FROM python:3.8-slim-buster
 
 WORKDIR /root/prod_docker
 
-RUN curl -sSL  | python -
+RUN apt-get update && apt-get install -y curl
+
+RUN curl -sSL https://install.python-poetry.org | python3 -
 ENV PATH = "${PATH}:/root/.local/bin"
 COPY poetry.lock pyproject.toml /root/prod_docker/
 RUN poetry update
