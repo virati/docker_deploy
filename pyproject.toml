@@ -9,9 +9,10 @@ packages = [{include = "prod_docker"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Flask = "^2.2.2"
 requests = "^2.28.1"
 waitress = "^2.1.2"
+uvicorn = "^0.18.3"
+fastapi = "^0.85.0"
 
 
 [build-system]
